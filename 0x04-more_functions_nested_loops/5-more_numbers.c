@@ -1,24 +1,24 @@
 #include "main.h"
 /**
- * more_numbers - prints 10 times the numbers, from 0 to 14
- *
+ * more_numbers - prints the range 0-14 ten times.
+ * Return: nothing.
  */
-
-void more_numbers(void)
-
+void print_most_numbers(void)
 {
-	int replay, count;
+	int i, j;
 
-	for (replay = 0; replay <= 9; replay++)
+	i = j = 0;
+	while (i < 10)
 	{
-		for (count = 0; count <= 14; count++)
+		while (j <= 14)
 		{
-			if (count >= 10 && count <= 14)
-			{
-				_putchar((count / 10) + '0');
-			}
-				_putchar((count % 10) + '0');
+			if (j >= 10)
+				_putchar(j / 10 + '0');
+			_putchar(j % 10 + '0');
+			++j;
 		}
+		_putchar('\n');
+		j = 0;
+		i++;
 	}
-	_putchar('\n');
 }
